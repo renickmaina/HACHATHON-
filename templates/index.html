@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero">
+    <div class="hero-content">
+        <h2>Track Your Emotions with AI</h2>
+        <p>Write journal entries and get instant emotion analysis powered by AI</p>
+        <a href="{{ url_for('journal') }}" class="cta-button">Get Started</a>
+    </div>
+</div>
+
+<div class="features">
+    <div class="feature">
+        <h3>AI-Powered Analysis</h3>
+        <p>Uses Hugging Face's sentiment analysis API to detect emotions in your writing</p>
+    </div>
+    <div class="feature">
+        <h3>Visual Dashboard</h3>
+        <p>See your mood trends over time with interactive charts</p>
+    </div>
+    <div class="feature">
+        <h3>Private & Secure</h3>
+        <p>Your journal entries are stored securely in your own database</p>
+    </div>
+</div>
+{% endblock %}

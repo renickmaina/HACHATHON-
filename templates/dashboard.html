@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="dashboard-container">
+    <h2>Dashboard</h2>
+    
+    <div class="charts">
+        <div class="chart-container">
+            <h3>Mood Trend</h3>
+            <canvas id="moodChart"></canvas>
+        </div>
+        
+        <div class="chart-container">
+            <h3>Emotion Distribution</h3>
+            <canvas id="emotionChart"></canvas>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Data passed from Flask
+    const dates = {{ dates | tojson }};
+    const scores = {{ scores | tojson }};
+    const sentiments = {{ sentiments | tojson }};
+</script>
+{% endblock %}
